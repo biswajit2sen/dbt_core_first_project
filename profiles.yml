@@ -1,13 +1,13 @@
 dbt_core_first_project:
   outputs:
     dev:
-      account: "{{ env_var(DBT_SNOWFLAKE_ACCOUNT) }}"
-      database: "{{ env_var(DBT_SNOWFLAKE_DATABASE) }}"
-      role: "{{ env_var(DBT_SNOWFLAKE_ROLE) }}"
-      schema: "{{ env_var(DBT_SNOWFLAKE_SCHEMA) }}"
+      account: "{{ env_var('DBT_SNOWFLAKE_ACCOUNT') }}"
+      database: "{{ env_var('DBT_SNOWFLAKE_DATABASE') }}"
+      role: "{{ env_var('DBT_SNOWFLAKE_ROLE') }}"
+      schema: "{{ env_var('DBT_SNOWFLAKE_SCHEMA') }}"
       threads: 4
       type: snowflake
-      user: "{{ env_var(DBT_SNOWFLAKE_USER) }}"
-      password: "{{ env_var(DBT_SNOWFLAKE_PASSWORD) }}"
-      warehouse: "{{ env_var(DBT_SNOWFLAKE_WAREHOUSE) }}"
+      user: "{{ env_var('DBT_SNOWFLAKE_USER') }}"
+      password: "{{ env_var('DBT_SNOWFLAKE_PASSWORD') }}"
+      warehouse: "{{ env_var('DBT_SNOWFLAKE_WAREHOUSE') }}"
   target: dev
