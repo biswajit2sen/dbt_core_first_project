@@ -6,7 +6,11 @@ sources:
     tables:
       - name: CUSTOMER
         description: "Customer table from TPCH"
-
+        columns:
+        - name: C_CUSTKEY
+          tests:
+            - not_null
+            - unique
       - name: lineitem
         description: "Lineitem table from TPCH"
 
