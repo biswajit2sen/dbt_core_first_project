@@ -9,6 +9,6 @@ dbt_core_first_project:
       type: snowflake
       user: "{{ env_var('DBT_SNOWFLAKE_USER') }}"
       password: "{{ env_var('DBT_SNOWFLAKE_PASSWORD') }}"
-      private_key_pem: "{{ env_var('PRIVATE_KEY') }}
+      private_key_pem: "{{ env_var('PRIVATE_KEY') }}"
       warehouse: "{{ env_var('DBT_SNOWFLAKE_WAREHOUSE') }}"
   target: dev
