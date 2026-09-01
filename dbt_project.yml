@@ -1,0 +1,23 @@
+#Name of the project
+name: 'dbt_core_first_project'
+
+profile: 'dbt_core_first_project'
+
+#Directory Configuration
+model-paths: ["models"]
+
+#Hierarchical Configuration of model directory
+models:
+  dbt_core_first_project:
+    bronze:
+      +materialized: table
+      +schema: bronze
+      +transient: true
+    silver:
+      +materialized: table
+      +schema: silver
+      +transient: false
+    gold:
+      +materialized: table
+      +schema: gold
+      +transient: false

@@ -1,0 +1,27 @@
+with source 
+as
+(
+    select * from {{source('tpch','lineitem')}}
+),
+renamed as
+(
+    select 
+        L_COMMENT as LINEITEM_COMMENT,
+        L_COMMITDATE as LINEITEM_COMMIT_DATE,
+        L_DISCOUNT as LINEITEM_DISCOUNT,
+        L_EXTENDEDPRICE as LINEITEM_EXTENDED_PRICE,
+        L_LINENUMBER as LINEITEM_LINE_NUMBER,
+        L_LINESTATUS as LINEITEM_LINE_STATUS,
+        L_ORDERKEY as LINEITEM_ORDER_KEY,
+        L_PARTKEY as LINEITEM_PART_KEY,
+        L_QUANTITY as LINEITEM_QUANTITY,   
+        L_RECEIPTDATE as LINEITEM_RECEIPT_DATE,
+        L_RETURNFLAG as LINEITEM_RETURN_FLAG,
+        L_SHIPDATE as LINEITEM_SHIP_DATE,
+        L_SHIPINSTRUCT as LINEITEM_SHIP_INSTRUCTION,
+        L_SHIPMODE as LINEITEM_SHIP_MODE,
+        L_SUPPKEY as LINEITEM_SUPPLIER_KEY
+    from source
+)
+
+select * from renamed

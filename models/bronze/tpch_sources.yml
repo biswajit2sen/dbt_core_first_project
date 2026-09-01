@@ -1,0 +1,29 @@
+sources:
+  - name: tpch
+    description: "TPCH data source from sf"
+    database: SNOWFLAKE_SAMPLE_DATA
+    schema: TPCH_SF1
+    tables:
+      - name: CUSTOMER
+        description: "Customer table from TPCH"
+
+      - name: lineitem
+        description: "Lineitem table from TPCH"
+
+      - name: NATION
+        description: "Nation table from TPCH"
+
+      - name: ORDERS
+        description: "Orders table from TPCH"
+
+      - name: PART
+        description: "Part table from TPCH"
+
+      - name: PARTSUPP
+        description: "Partsupp table from TPCH"
+
+      - name: REGION
+        description: "Region table from TPCH"
+        
+      - name: SUPPLIER
+        description: "Supplier table from TPCH"
