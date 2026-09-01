@@ -1,0 +1,16 @@
+name: CI_test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  dbt_ci:
+    runs_on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: install python
+        uses: actions/setup-python@v4
+        run: python -- version
+      - name: install pip
+        run: python -m pip install --upgrade pip
