@@ -1,6 +1,8 @@
 name: CI_NEW
 
 on:
+  push:
+    branches: ["main"]
   workflow_dispatch:
 
 env:
@@ -31,9 +33,6 @@ jobs:
         run: pip install dbt-snowflake
       - name: Install python deps
         run: dbt deps
-      - name: converting private key
-        run: |
-          export PRIVATE_KEY=$(python3 -c "import os; print(os.environ['RAW_PRIVATE_KEY'].replace('\\n', '\n').strip())")
       - name: Run dbt test
         run: dbt test --profiles-dir ./
       - name: dbt run
